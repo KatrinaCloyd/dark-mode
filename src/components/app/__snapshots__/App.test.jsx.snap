@@ -37,6 +37,7 @@ Object {
           </div>
         </div>
         <img
+          class="loading"
           src="https://cdn.dribbble.com/users/841405/screenshots/2541549/animaion-bb.gif"
         />
       </div>
@@ -75,6 +76,7 @@ Object {
         </div>
       </div>
       <img
+        class="loading"
         src="https://cdn.dribbble.com/users/841405/screenshots/2541549/animaion-bb.gif"
       />
     </div>
