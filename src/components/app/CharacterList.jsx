@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { getBBcharacterList } from '../../services/bbApi';
 import CharacterCard from './CharacterCard';
 import Loading from './Loading';
+import style from './list.css';
 
 export default function CharacterList() {
     const [characters, setChars] = useState(null);
@@ -18,7 +19,7 @@ export default function CharacterList() {
     if (loading) return <Loading />;
 
     return (
-        <div>
+        <div className={style.charListLight}>
             {characters.map((char) => <CharacterCard char={char} key={char.id} />)}
         </div>
     );

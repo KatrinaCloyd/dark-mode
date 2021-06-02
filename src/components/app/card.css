@@ -1,0 +1,49 @@
+.charCardLight{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    background-color: grey;
+    padding: 10px;
+    margin: 10px;
+}
+
+.charCardParty{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    background-color: rgb(49, 218, 218);
+    padding: 10px;
+    margin: 10px;
+}
+
+.charCardLight h3{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.charCardParty h3{
+    font-family: 'Bungee Inline', cursive;
+    color: darkviolet;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.charCardParty h4{
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 1.6em;
+    color: darkviolet;
+}
+
+.charCardParty ul{
+    background-color: darkviolet;
+    width: 80%;
+}
+
+.charCardParty li{
+    font-family: 'Covered By Your Grace', cursive;
+    color: hotpink;
+    font-size: 1.25em;
+    margin: .5em 0em;
+}

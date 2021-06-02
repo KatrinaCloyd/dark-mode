@@ -1,3 +1,36 @@
+.headLight{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: darkgray;
+}
+
+.headParty{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: darkviolet;
+  color:rgb(49, 218, 218);
+}
+
+h1 {
+  font-family: 'Bungee Inline', cursive;
+  font-size: 3em;
+}
+
+.headLight h4 {
+  color: white;
+}
+
+.headParty h4 {
+  font-family: 'Covered By Your Grace', cursive;
+  color: hotpink;
+}
+
 .switch {
     position: relative;
     display: inline-block;
@@ -39,7 +72,7 @@
   }
   
   input:checked + .slider {
-    background-color: darkviolet;
+    background-color: hotpink;
   }
   
   input:checked + .slider:before {
