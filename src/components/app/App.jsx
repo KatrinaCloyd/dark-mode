@@ -2,11 +2,11 @@
 import React from 'react';
 import CharacterList from './CharacterList';
 import Header from './Header';
-import style from './app.css';
+import './app.css';
 
 export default function App() {
   return (
-    <div className={style.mainPageLight}>
+    <div >
       <Header />
       <CharacterList />
     </div>
