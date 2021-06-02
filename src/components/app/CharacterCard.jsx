@@ -1,11 +1,16 @@
 /* eslint-disable indent */
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from '../../state/ThemeProvider';
 import PropTypes from 'prop-types';
+import style from './card.css';
 
 export default function CharacterCard({ char }) {
+
+    const { party } = useContext(ThemeContext);
+
     return (
-        <div>
-            <h3>Name: {char.name}</h3>
+        <div className={`${party ? style.charCardParty : style.charCardLight}`}>
+            <h3>{char.name}</h3>
             <img src={char.image} />
             <h4>Nickname: {char.nickname}</h4>
             <ul>
