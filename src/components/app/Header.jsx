@@ -9,7 +9,7 @@ export default function Header() {
     const { party, partyOn } = useContext(ThemeContext);
 
     return (
-        <div aria-label={'header'} className={`${party ? style.headParty : style.headLight}`}>
+        <div aria-label={'hdr'} className={`${party ? style.headParty : style.headLight}`}>
             <h1>Breaking Bad Character Party... < br />or not</h1>
             <div className={style.controls}>
                 <h4>boring</h4>

@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 /* eslint-disable indent */
 import React from 'react';
-import { render, screen, waitFor, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import App from './App';
@@ -88,30 +88,26 @@ describe('Breaking bad display mode page', () => {
     afterAll(() => server.close());
 
     it('displays a list of breaking bad characters with styling based on checkbox', async () => {
-        const { homePage } = render(
+        const homePage = render(
             <ThemeProvider >
                 <App />
             </ThemeProvider >);
         expect(homePage).toMatchSnapshot();
 
-        // //test for the <ul> that contains the BB characters:
-        // const charList = await screen.findAllByRole('list', {
-        //     name: 'characters',
-        // });
-        // expect(charList).toHaveLength(3);
+        const hdr = screen.getByLabelText('hdr');
+        expect(hdr).toHaveClass('headLight');
 
-        // const hdr = screen.getByLabelText('header');
-        // expect(hdr).toHaveStyle({ 'background-color': 'darkgray' });
+        const toggle = await screen.findByRole('checkbox');
+        expect(toggle).toBeVisible();
 
-        // const toggle = await screen.findByRole('checkbox');
-        // expect(toggle).toBeVisible();
+        //test for the <ul> that contains the BB characters:
+        const charList = await screen.findAllByRole('list', {
+            name: 'characters',
+        });
+        expect(charList).toHaveLength(3);
 
+        fireEvent.click(toggle);
+        expect(hdr).toHaveClass('headParty');
 
-        // return waitFor(() => {
-        //     //test for proper track listing via a song title:
-        //     screen.getByText(/Sparks/);
-        //     //test for cover art image:
-        //     screen.getByAltText('album cover art');
-        // });
     });
 });
