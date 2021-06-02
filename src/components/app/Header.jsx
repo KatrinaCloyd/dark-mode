@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable indent */
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../state/ThemeProvider';
@@ -8,7 +9,7 @@ export default function Header() {
     const { party, partyOn } = useContext(ThemeContext);
 
     return (
-        <div className={`${party ? style.headParty : style.headLight}`}>
+        <div aria-label={'header'} className={`${party ? style.headParty : style.headLight}`}>
             <h1>Breaking Bad Character Party... < br />or not</h1>
             <div className={style.controls}>
                 <h4>boring</h4>

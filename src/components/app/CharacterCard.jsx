@@ -13,7 +13,7 @@ export default function CharacterCard({ char }) {
             <h3>{char.name}</h3>
             <img src={char.image} />
             <h4>Nickname: {char.nickname}</h4>
-            <ul>
+            <ul aria-label={'characters'}>
                 {char.roles.map((job) => <li key={job}>{job}</li>)}
             </ul>
         </div>
